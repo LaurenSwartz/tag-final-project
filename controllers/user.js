@@ -2,7 +2,6 @@ const mongodb =require('../data/database');
 const ObjectId =require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
-    swagger.tags=['Users']
     const result =await mongodb.getDatabase().db().collection('user').find();
     result.toArray().then((users)=> {
         res.setHeader('Content-Type', 'application/json');
@@ -15,7 +14,6 @@ const getSingle = async (req, res) => {
     if (!ObjectId.isValid(req.params.id)) {
         res.status(400).json('Must use a valid contact id to find a contact.');
       }
-    swagger.tags=['Users']
     const userId= new ObjectId(req.params.id);
     const result =await mongodb.getDatabase().db().collection('user').find({_id: userId});
     result.toArray().then((users)=> {
@@ -26,7 +24,6 @@ const getSingle = async (req, res) => {
 };
 
 const createUser = async (req,res) => {
-    swagger.tags=['Users']
     const user = {
         email: req.body.email,
         gender: req.body.gender,
