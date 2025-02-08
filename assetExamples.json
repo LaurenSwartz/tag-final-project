@@ -1,0 +1,72 @@
+[
+    {
+        "assetName": "Laptop",
+        "assetType": "Electronics",
+        "assetValue": 1200,
+        "assetOwner": "John Doe",
+        "assetLocation": "New York"
+    },
+    {
+        "assetName": "Office Chair",
+        "assetType": "Furniture",
+        "assetValue": 150,
+        "assetOwner": "Jane Smith",
+        "assetLocation": "San Francisco"
+    },
+    {
+        "assetName": "Projector",
+        "assetType": "Electronics",
+        "assetValue": 800,
+        "assetOwner": "Alice Johnson",
+        "assetLocation": "Chicago"
+    },
+    {
+        "assetName": "Conference Table",
+        "assetType": "Furniture",
+        "assetValue": 600,
+        "assetOwner": "Bob Brown",
+        "assetLocation": "Los Angeles"
+    },
+    {
+        "assetName": "Printer",
+        "assetType": "Electronics",
+        "assetValue": 300,
+        "assetOwner": "Charlie Davis",
+        "assetLocation": "Houston"
+    },
+    {
+        "assetName": "Whiteboard",
+        "assetType": "Office Supplies",
+        "assetValue": 100,
+        "assetOwner": "Diana Evans",
+        "assetLocation": "Seattle"
+    },
+    {
+        "assetName": "Desk Lamp",
+        "assetType": "Furniture",
+        "assetValue": 50,
+        "assetOwner": "Ethan Foster",
+        "assetLocation": "Boston"
+    },
+    {
+        "assetName": "Smartphone",
+        "assetType": "Electronics",
+        "assetValue": 900,
+        "assetOwner": "Fiona Green",
+        "assetLocation": "Miami"
+    },
+    {
+        "assetName": "Bookshelf",
+        "assetType": "Furniture",
+        "assetValue": 200,
+        "assetOwner": "George Harris",
+        "assetLocation": "Denver"
+    },
+    {
+        "assetName": "Router",
+        "assetType": "Electronics",
+        "assetValue": 150,
+        "assetOwner": "Hannah White",
+        "assetLocation": "Atlanta"
+    }
+]

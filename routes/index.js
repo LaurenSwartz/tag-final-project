@@ -5,5 +5,7 @@ router.get('/', (req, res) =>{
     res.send('Hello World');
 });
 router.use('/users', require('./users'));
+router.use('/assets', require('./assets'));
+router.use('/api-docs', require('./swagger'));
 
 module.exports =router;
