@@ -5,10 +5,10 @@
     "description": "Technology Assets Gateway - An Asset Management System",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "tag-final-project.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
