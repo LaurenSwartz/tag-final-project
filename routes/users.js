@@ -1,13 +1,10 @@
-const express = require('express');
-const router =express.Router();
+const router = require("express").Router();
 
-const usersController =require('../controllers/user');
+const usersController = require("../controllers/user");
 
+router.get("/", usersController.getAll);
 
-
-router.get('/', usersController.getAll);
-
-router.get('/:id', usersController.getSingle);
+router.get("/:id", usersController.getSingle);
 
 //router.post('/', usersController.createUser);
 
@@ -15,4 +12,4 @@ router.get('/:id', usersController.getSingle);
 
 //router.delete('/:id', usersController.deleteUser);
 
-module.exports = router; 
+module.exports = router;
