@@ -1,0 +1,26 @@
+[
+    {
+        "email": "john.doe@example.com",
+        "gender": "male",
+        "position": "Software Engineer",
+        "department": "Engineering",
+        "firstName": "John",
+        "lastName": "Doe"
+    },
+    {
+        "email": "jane.smith@example.com",
+        "gender": "female",
+        "position": "Product Manager",
+        "department": "Product",
+        "firstName": "Jane",
+        "lastName": "Smith"
+    },
+    {
+        "email": "alex.jones@example.com",
+        "gender": "non-binary",
+        "position": "UX Designer",
+        "department": "Design",
+        "firstName": "Alex",
+        "lastName": "Jones"
+    }
+]

@@ -13,6 +13,9 @@
   "paths": {
     "/": {
       "get": {
+        "tags": [
+          "Hello World"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -23,6 +26,9 @@
     },
     "/users/": {
       "get": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -32,10 +38,56 @@
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                },
+                "gender": {
+                  "example": "any"
+                },
+                "position": {
+                  "example": "any"
+                },
+                "department": {
+                  "example": "any"
+                },
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/users/{id}": {
       "get": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -56,10 +108,90 @@
             "description": "Bad Request"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                },
+                "gender": {
+                  "example": "any"
+                },
+                "position": {
+                  "example": "any"
+                },
+                "department": {
+                  "example": "any"
+                },
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/assets/": {
       "get": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -71,6 +203,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "parameters": [
           {
@@ -110,6 +245,9 @@
     },
     "/assets/{id}": {
       "get": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -132,6 +270,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "parameters": [
           {
@@ -178,6 +319,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "parameters": [
           {
@@ -202,6 +346,9 @@
     },
     "/assets/owner/{assetOwner}": {
       "get": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -223,6 +370,9 @@
     },
     "/assets/checkout/{id}": {
       "put": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "parameters": [
           {
