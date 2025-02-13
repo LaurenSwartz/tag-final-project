@@ -6,7 +6,8 @@ const doc = {
     description: "Technology Assets Gateway - An Asset Management System",
   },
   host: "tag-final-project.onrender.com",
-  schemes: ["https"],
+  // host: "localhost:3000",
+  schemes: ["http", "https"],
 };
 
 const outputFile = "./swagger.json";
