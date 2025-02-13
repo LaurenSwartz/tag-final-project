@@ -13,6 +13,9 @@
   "paths": {
     "/": {
       "get": {
+        "tags": [
+          "Hello World"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -23,6 +26,9 @@
     },
     "/users/": {
       "get": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -34,6 +40,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -76,6 +85,9 @@
     },
     "/users/{id}": {
       "get": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -98,6 +110,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -147,6 +162,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -171,6 +189,9 @@
     },
     "/assets/": {
       "get": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -182,6 +203,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "parameters": [
           {
@@ -221,6 +245,9 @@
     },
     "/assets/{id}": {
       "get": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -243,6 +270,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "parameters": [
           {
@@ -289,6 +319,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "parameters": [
           {
@@ -313,6 +346,9 @@
     },
     "/assets/owner/{assetOwner}": {
       "get": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -334,6 +370,9 @@
     },
     "/assets/checkout/{id}": {
       "put": {
+        "tags": [
+          "Assets"
+        ],
         "description": "",
         "parameters": [
           {
