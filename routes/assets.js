@@ -1,22 +1,20 @@
-const express = require('express');
-const router =express.Router();
+const express = require("express");
+const router = express.Router();
 
-const assetsController =require('../controllers/assets');
+const assetsController = require("../controllers/assets");
 
+router.get("/", assetsController.getAll);
 
+router.get("/:id", assetsController.getSingle);
 
-router.get('/',assetsController.getAll);
+router.post("/", assetsController.createAsset);
 
-router.get('/:id',assetsController.getSingle);
+router.put("/:id", assetsController.updateAsset);
 
-router.post('/',assetsController.createAsset);
+router.delete("/:id", assetsController.deleteAsset);
 
-router.put('/:id',assetsController.updateAsset);
+router.get("/owner/:assetOwner", assetsController.getAssetByOwner);
 
-router.delete('/:id',assetsController.deleteAsset);
+router.put("/checkout/:id", assetsController.checkOutAsset);
 
-router.get('/owner/:assetOwner',assetsController.getAssetByOwner);
-
-router.put('/checkout/:id',assetsController.checkOutAsset);
-
-module.exports = router; 
+module.exports = router;
