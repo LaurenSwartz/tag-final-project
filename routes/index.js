@@ -6,6 +6,7 @@ router.get("/", (req, res) => {
 });
 router.use("/users", require("./users"));
 router.use("/assets", require("./assets"));
+router.use("/history", require("./history"));
 router.use("/api-docs", require("./swagger"));
 
 module.exports = router;
