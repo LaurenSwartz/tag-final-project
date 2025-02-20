@@ -17,4 +17,6 @@ router.put("/:id", isAuthenticated ,validation.saveAsset, assetsController.updat
 
 router.delete("/:id",isAuthenticated , assetsController.deleteAsset);
 
+router.get("/:id/qrcode", assetsController.generateQRCode);
+
 module.exports = router;
