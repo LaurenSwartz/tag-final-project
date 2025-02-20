@@ -1,6 +1,6 @@
 const mongodb = require("../data/database");
 const ObjectId = require("mongodb").ObjectId;
-
+const QRCode = require('qrcode');
 const getAll = async (req, res) => {
   //#swagger.tags=['Assets']
   try {
@@ -176,6 +176,30 @@ const checkOutAsset = async (req, res) => {
   }
 };
 
+const generateQRCode = async (req, res) => {
+  //#swagger.tags=['Assets']
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      return res.status(400).json("Must use a valid asset id to generate QR code.");
+    }
+    const assetId = new ObjectId(req.params.id);
+    const result = await mongodb.getDatabase().db().collection("asset").findOne({ _id: assetId });
+    if (!result) {
+      return res.status(404).json("Asset not found.");
+    }
+
+    const assetDetails = JSON.stringify(result);
+    QRCode.toDataURL(assetDetails, (err, url) => {
+      if (err) {
+        return res.status(500).json("An error occurred while generating the QR code.");
+      }
+      res.status(200).json({ qrCode: url });
+    });
+  } catch (error) {
+    res.status(500).json("An error occurred while generating the QR code.");
+  }
+};
+
 module.exports = {
   getAll,
   getSingle,
@@ -184,4 +208,5 @@ module.exports = {
   deleteAsset,
   getAssetByOwner,
   checkOutAsset,
+  generateQRCode,
 };
