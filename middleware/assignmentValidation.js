@@ -1,12 +1,10 @@
 const validator = require("../helpers/validate");
-
-const saveAsset = (req, res, next) => {
+const saveAssignment = (req, res, next) => {
   const validationRule = {
-    assetName: "required|string",
-    assetType: "required|string",
-    assetValue: "required|string",
-    assetOwner: "required|string",
-    assetLocation: "required|string",
+    user_id: "required|string",
+    asset_id: "required|string",
+    date_of_assignment: "required|string"
+    
   };
   validator(req.body, validationRule, {}, (err, status) => {
     if (!status) {
@@ -22,5 +20,5 @@ const saveAsset = (req, res, next) => {
 };
 
 module.exports = {
-  saveAsset,
+  saveAssignment,
 };

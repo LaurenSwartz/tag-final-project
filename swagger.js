@@ -7,7 +7,7 @@ const doc = {
   },
   host: "tag-final-project.onrender.com",
   // host: "localhost:3000",
-  schemes: ["http", "https"],
+  schemes: ["https"],
 };
 
 const outputFile = "./swagger.json";
